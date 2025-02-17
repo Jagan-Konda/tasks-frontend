@@ -1,0 +1,11 @@
+.page-not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-not-found {
+    font-size: 36px;
+    color: black;
+    font-family: "Roboto";
+}
