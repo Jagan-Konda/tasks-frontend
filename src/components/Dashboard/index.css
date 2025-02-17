@@ -1,0 +1,119 @@
+/* Main Container */
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= Task Form ======= */
+.task-form-container {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.task-form-container h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.task-form-container input,
+.task-form-container textarea,
+.task-form-container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.task-form-container button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.task-form-container button:hover {
+    background: #0056b3;
+}
+
+/* ======= Task List ======= */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-card {
+    background: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #007bff;
+}
+
+.task-card h3 {
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+
+.task-card p {
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+.task-status {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 3px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.status-pending {
+    background: #ffcc00;
+    color: #000;
+}
+
+.status-inprogress {
+    background: #17a2b8;
+    color: white;
+}
+
+.status-completed {
+    background: #28a745;
+    color: white;
+}
+
+/* Buttons */
+.task-actions {
+    margin-top: 5px;
+}
+
+.task-actions button {
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit-button {
+    background: #ffc107;
+    color: black;
+}
+
+.delete-button {
+    background: #dc3545;
+    color: white;
+}
