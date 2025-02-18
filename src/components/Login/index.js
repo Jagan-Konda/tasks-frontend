@@ -34,23 +34,27 @@ const Login = () => {
   const onLogin = async event => {
     event.preventDefault()
 
-    const userDetails = { email, password }
-    const apiUrl = 'https://tasks-backend-ujte.onrender.com/login'
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userDetails),
-    }
+    if (email && password) {
+      const userDetails = { email, password }
+      const apiUrl = 'https://tasks-backend-ujte.onrender.com/login'
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userDetails),
+      }
 
-    const response = await fetch(apiUrl, options)
-    const data = await response.json()
+      const response = await fetch(apiUrl, options)
+      const data = await response.json()
 
-    if (response.ok) {
-      onSubmitSuccess(data.jwtToken)
+      if (response.ok) {
+        onSubmitSuccess(data.jwtToken)
+      } else {
+        onSubmitFailure(data.error)
+      }
     } else {
-      onSubmitFailure(data.error)
+      onSubmitFailure("All Fields are required")
     }
   }
 
